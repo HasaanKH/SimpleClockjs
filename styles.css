@@ -1,1 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: aqua;
+    border: 3px solid black;
+    position: relative;
+}
+
+.number {
+    --angle: 0 deg;
+     height: 100%;
+     width: 100%;
+     text-align: center;
+     position: absolute;
+     border-radius: 50%;
+     transform: rotate(var(--angle));
+}
+.number1 {
+    --angle: 30deg;
+}
+.number2{
+    --angle: 60deg;
+}.number3{
+    --angle: 90deg;
+}.number4{
+    --angle: 120deg;
+}.number5{
+    --angle: 150deg;
+}.number6{
+    --angle: 180deg;
+}.number7{
+    --angle: 210deg;
+}
+.number8{
+    --angle: 240deg;
+}.number9{
+    --angle: 270deg;
+}.number10{
+    --angle: 300deg;
+}.number11{
+    --angle: 330deg;
+}
+
+.hand {
+    height: 50%;
+    width: 5px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hand.minute {
+    height: 40%;
+    width: 5px;
+}
+
+.hand.hour {
+    height: 30%;
+    width: 7px;
+}
+
+.hand.second {
+    height: 41%;
+    width: 5px;
+}
 
