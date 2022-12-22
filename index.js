@@ -9,9 +9,9 @@ function setClock() {
     var secondRatio = date.getSeconds()/60;
     var minuteRatio = date.getMinutes()/60;
     var hourRatio = date.getHours()/12;
-    hourHand.style.setProperty('--rotation', hourRatio * 360);
-    minuteHand.style.setProperty('--rotation', minuteRatio * 360);
-    secondHand.style.setProperty('--rotation', (secondRatio + minuteRatio/12) * 360);
+    hourHand.style.setProperty('--rotation', (minuteRatio/12 + hourRatio) * 360);
+    minuteHand.style.setProperty('--rotation', (secondRatio/60 + minuteRatio) * 360);
+    secondHand.style.setProperty('--rotation', (secondRatio) * 360);
 }
 
 setClock();
